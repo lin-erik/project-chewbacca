@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Home from './Home.jsx'
+import '../styles/css/main.css'
 
 class App extends Component {
   constructor(props) {

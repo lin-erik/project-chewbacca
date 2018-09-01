@@ -19,7 +19,12 @@ module.exports = {
         options: {
           presets: ['@babel/preset-env', '@babel/preset-react']
         }
-      }
+      },
+      {
+        test:/\.css$/,
+        include: SRC_DIR,
+        loader: ['style-loader','css-loader']
+      },
     ]
   },
   devServer: {

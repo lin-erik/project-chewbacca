@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import ProjectCard from './ProjectCard.jsx';
 
 
 class Home extends Component {
@@ -12,6 +13,9 @@ class Home extends Component {
     return (
       <div>
         Home Component
+        <div>
+          <ProjectCard/>
+        </div>
       </div>
     )
   }
