@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Home from './Home.jsx'
 import '../styles/css/main.css'
+import Header from './Header.jsx'
 
 class App extends Component {
   constructor(props) {
@@ -12,7 +13,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Home />
+        <Header />
+
+        <div style={{ height: '1500px' }}>Test</div>
       </div>
     )
   }
