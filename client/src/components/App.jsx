@@ -14,8 +14,7 @@ class App extends Component {
     return (
       <div>
         <Header />
-
-        <div style={{ height: '1500px' }}>Test</div>
+        <Home/>
       </div>
     )
   }
