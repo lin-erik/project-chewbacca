@@ -1,6 +1,11 @@
 import React, { Component } from 'react'
 import { Button, Sticky } from 'semantic-ui-react'
 import TextTransition from 'react-text-transition'
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom'
 
 class Header extends Component {
   constructor(props) {
@@ -44,14 +49,17 @@ class Header extends Component {
     return (
       <div>
         <Sticky>
-          <h1>
-            <TextTransition
-              delay={0}
-              order={this.state.animateDir}
-              spring={{ stiffness: 350, damping: 25 }}
-              text={this.state.text}
-            />
-          </h1>
+          <div style={{display:"flex"}}>
+            <h1 style={{flexGrow:1}}> 
+              <TextTransition
+                delay={0}
+                order={this.state.animateDir}
+                spring={{ stiffness: 350, damping: 25 }}
+                text={this.state.text}
+              />
+            </h1>
+            <Link to="/upload">Submit your app</Link>
+          </div>
         </Sticky>
       </div>
     )
