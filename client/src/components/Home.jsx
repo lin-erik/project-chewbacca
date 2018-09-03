@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import ProjectCard from './ProjectCard.jsx';
+import Feed from './Feed.jsx'
 
 
 class Home extends Component {
@@ -10,9 +12,15 @@ class Home extends Component {
 
   render() {
     return (
-      <div>
-        Home Component
-      </div>
+      <section style={{display: "flex", flexDirection: "column", flexGrow: 1, margin:"0 auto", maxWidth:"600px", width:"100%", position:"relative", paddingTop:"60px"}}>
+        <div className="feeds-container"style={{display:"flex", flexDirection:"column"}}>
+          {[...Array(10)].map(()=>(
+            <ProjectCard/>
+          ))}
+          {/* <Feed/> */}
+          {/* <ProjectCard/> */}
+        </div>
+      </section>
     )
   }
 }
